@@ -1,0 +1,32 @@
+$whiteColor: #ffffff;
+$textColor: #351F73;
+$grayText: #828282;
+$menuBgColor: #46A6A4;
+$navTextColor: rgba(255, 255, 255, 0.72);
+$hoverBgColor: rgba(53, 31, 115, 0.2);
+$bgColor: #E9E9E9;
+$bgButton: #E0E0E0;
+$yellowBg: #FDEFC8;
+$controlBg: #F5F5F5;
+$dropdownFill: #828282;
+%menu__animation-properties {
+  background-color: $bgColor;
+  border-radius: 0.5rem;
+  background: linear-gradient(120deg, #e5e5e5 20%, #f0f0f0 28%, #f0f0f0 30%, #e5e5e5 38%);
+  opacity: 0.4;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load 2s infinite;
+}
+
+%boats__animation-properties {
+  background-color: $bgColor;
+  border-radius: 0.5rem;
+  background: linear-gradient(120deg, #e5e5e5 20%, #f0f0f0 28%, #f0f0f0 30%, #e5e5e5 38%);
+  opacity: 1;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load 2s infinite;
+}
+
+;

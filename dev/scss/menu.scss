@@ -1,0 +1,140 @@
+.menu {
+  background-color: $menuBgColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 8rem;
+  max-height: 6.4rem;
+
+  &__image {
+    height: 4.6rem;
+    width: 9.6rem;
+    @extend %menu__animation-properties;
+  }
+
+  &__icon {
+    display: none;
+    width: 2.4rem;
+    height: 2.4rem;
+    @extend %menu__animation-properties;
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $hoverBgColor;
+        border-radius: 1rem;
+
+      }
+
+      &-icon {
+        height: 2rem;
+        width: 2rem;
+        @extend %menu__animation-properties;
+      }
+
+      &-text {
+        width: 7.5rem;
+        height: 1.4rem;
+        @extend %menu__animation-properties;
+      }
+
+      &-visible {
+        display: flex;
+        align-items: center;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: $hoverBgColor;
+          border-radius: 0.8rem;
+        }
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 0 1.1rem;
+      padding: 1.5rem 1.2rem;
+    }
+  }
+
+  &__button {
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    @extend %menu__animation-properties;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1555px) {
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1.6rem;
+    padding-left: 1.9rem;
+
+    &__image {
+      display: none;
+    }
+
+    &__icon {
+      display: block;
+      transition: 0.3s;
+      z-index: 1;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+
+    &__nav {
+      position: absolute;
+
+      &-item {
+        display: none;
+
+        &-visible {
+          transition: 0.3s;
+          margin-left: 2.9rem;
+
+          &:hover {
+            background-color: transparent;
+
+            opacity: .8;
+          }
+
+        }
+      }
+
+      &-link {
+        padding: 0;
+      }
+    }
+
+    &__plus-icon {
+      padding: 0.6rem 0;
+    }
+  }
+}
+
+@keyframes load {
+  100% {
+    background-position: -100% 0;
+  }
+}
